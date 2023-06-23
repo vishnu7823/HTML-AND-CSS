@@ -1,44 +1,69 @@
-* {
+html {
     box-sizing: border-box;
   }
   
-  body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #f5f6f7;
+  *, *::before, *::after {
+    box-sizing: inherit;
   }
   
-  .header {
-    text-align: center;
-    text-transform: uppercase;
-    padding: 32px;
-    background-color: #0a0a23;
-    color: #fff;
-    border-bottom: 4px solid #fdb347;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 10px;
-  }
-  
-  .gallery img {
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
+  #piano {
+    background-color: #00471b;
+    width: 992px;
+    height: 290px;
+    margin: 80px auto;
+    padding: 90px 20px 0 20px;
+    position: relative;
     border-radius: 10px;
   }
   
-  .gallery::after {
-    content: "";
-    width: 350px;
+  .keys {
+    background-color: #040404;
+    width: 949px;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden;
   }
   
+  .key {
+    background-color: #ffffff;
+    position: relative;
+    width: 41px;
+    height: 175px;
+    margin: 2px;
+    float: left;
+    border-radius: 0 0 3px 3px;
+  }
+  
+  .key.black--key::after {
+    background-color: #1d1e22;
+    content: "";
+    position: absolute;
+    left: -18px;
+    width: 32px;
+    height: 100px;
+    border-radius: 0 0 3px 3px;
+  }
+  
+  .logo {
+    width: 200px;
+    position: absolute;
+    top: 23px;
+  }
+  
+  @media (max-width: 768px) {
+    #piano {
+      width: 358px;
+    }
+  
+    .keys {
+      width: 318px;
+    }
+  
+    .logo {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 1199px) and (min-width: 769px) {
+  
+  }
